@@ -2,5 +2,11 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Euler-Projects/Euler1-Multiples-of-3-or-5" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Euler-Projects/Euler2-Even-Fibonacci-Numbers" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Euler-Projects/Euler3-Largest-Prime-Factor" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Euler-Projects/Euler4-Largest-Palindrome-Product" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Euler-Projects/Euler5-Smallest-Multiple" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Rock-Paper-Scissors" vcs="Git" />
   </component>
 </project>
