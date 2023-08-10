@@ -35,7 +35,9 @@ while game:
             if player_move == pc_move:
                 Ties += 1
                 print("It's a Tie.")
-            elif player_move == "r" and pc_move == "s" or player_move == "p" and pc_move == "r" or player_move == "s" and pc_move == "p":
+            elif player_move == "r" and pc_move == "s" or \
+                    player_move == "p" and pc_move == "r" or \
+                    player_move == "s" and pc_move == "p":
                 Wins += 1
                 print("It's a Win.")
             else:
