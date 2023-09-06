@@ -2,48 +2,53 @@
 
 import random
 
-moves = {'r': 'Rock', 'p': 'Paper', 's': 'Scissors', 'q': 'Quit'}
-possible_moves = list(moves.keys())
 
+def play_rps():
 
-print("Rock, Paper, Scissors")
+    moves = {'r': 'Rock', 'p': 'Paper', 's': 'Scissors', 'q': 'Quit'}
+    possible_moves = list(moves.keys())
 
-Wins = 0
-Losses = 0
-Ties = 0
+    print("Rock, Paper, Scissors")
 
-print(f"{Wins} Wins, {Losses} Losses, {Ties} Ties")
+    wins = 0
+    losses = 0
+    ties = 0
 
-game = True
+    print(f"{wins} wins, {losses} losses, {ties} ties")
 
-while game:
-    player_move = input(
-        "\nEnter your move: (r)ock (p)aper (s)cissors or (q)uit: ")
+    game = True
 
-    if player_move in possible_moves:
+    while game:
+        player_move = input(
+            "\nEnter your move: (r)ock (p)aper (s)cissors or (q)uit: ")
 
-        if player_move == "q":
-            print(f"{Wins} Wins, {Losses} Losses, {Ties} Ties")
-            break
+        if player_move in possible_moves:
+
+            if player_move == "q":
+                print(f"{wins} wins, {losses} losses, {ties} ties")
+                break
+
+            else:
+
+                pc_move = random.choice(possible_moves[0:2])
+                print(
+                    f"{moves[player_move]} vs {moves[pc_move]}")
+
+                if player_move == pc_move:
+                    ties += 1
+                    print("It's a Tie.")
+                elif player_move == "r" and pc_move == "s" or \
+                        player_move == "p" and pc_move == "r" or \
+                        player_move == "s" and pc_move == "p":
+                    wins += 1
+                    print("It's a Win.")
+                else:
+                    losses += 1
+                    print("It's a Loss.")
 
         else:
+            print("bad input")
+            continue
 
-            pc_move = random.choice(possible_moves[0:2])
-            print(
-                f"{moves[player_move]} vs {moves[pc_move]}")
 
-            if player_move == pc_move:
-                Ties += 1
-                print("It's a Tie.")
-            elif player_move == "r" and pc_move == "s" or \
-                    player_move == "p" and pc_move == "r" or \
-                    player_move == "s" and pc_move == "p":
-                Wins += 1
-                print("It's a Win.")
-            else:
-                Losses += 1
-                print("It's a Loss.")
-
-    else:
-        print("bad input")
-        continue
+play_rps()
