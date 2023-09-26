@@ -1,5 +1,5 @@
 prime_factors = []
-number = 600851475143
+number = int(input("Give me a number so I can give you its prime factors: "))
 
 for factor in range(2, number + 1):
     while number % factor == 0:

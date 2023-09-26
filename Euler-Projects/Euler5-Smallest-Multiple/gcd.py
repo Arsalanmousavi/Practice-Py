@@ -1,6 +1,6 @@
 # GCD of a and b
-a = 54
-b = 21
+a = int(input("Give me the first number:"))
+b = int(input("Give me the second number:"))
 
 # check non-zero b
 if b == 0:

@@ -20,5 +20,3 @@ for i in range(0, whole_blocks+1):
     print(f"\r[{i*b}{(whole_blocks-i)*c}] Progress Percentage: {progress_percentage}%"
           f"| Time remaining: {time_remaining}", end='')
     time.sleep(total_time/whole_blocks)
-
-
